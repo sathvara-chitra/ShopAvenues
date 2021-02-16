@@ -1,4 +1,4 @@
-package com.dexterapp.shopavenues.adapters
+package com.dexterapp.shopavenues.adapter
 
 import android.content.Context
 import android.view.LayoutInflater

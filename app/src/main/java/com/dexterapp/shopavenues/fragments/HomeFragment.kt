@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
-import com.dexterapp.shopavenues.adapters.*
-import com.dexterapp.shopavenues.models.tabname
+import com.dexterapp.shopavenues.adapter.*
+import com.dexterapp.shopavenues.model.tabname
 import com.synnapps.carouselview.CarouselView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -84,7 +84,7 @@ class HomeFragment : Fragment() {
 
         )
 
-        tabRv = view.findViewById(R.id.tab_rv)
+//        tabRv = view.findViewById(R.id.tab_rv)
         shopforRv = view.findViewById(R.id.shopfor_rv)
         avenuesRv = view.findViewById(R.id.avenues_rv)
         brandRv = view.findViewById(R.id.brand_rv)
@@ -108,13 +108,13 @@ class HomeFragment : Fragment() {
         val brandAdapter = BrandAdapter(imagesbrands, context)
         val trandingAdapter = TrandingAdapter(imagestrending, context)
 
-        tabRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+//        tabRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         shopforRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         avenuesRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         brandRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         brandRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         TrandingRv.layoutManager = GridLayoutManager(context, 2)
-        tabRv.adapter = tabAdapter
+//        tabRv.adapter = tabAdapter
         shopforRv.adapter = shopforAdapter
         avenuesRv.adapter = avenuesAdapter
         brandRv.adapter = brandAdapter

@@ -1,4 +1,4 @@
-package com.dexterapp.shopavenues.adapters
+package com.dexterapp.shopavenues.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
-import com.dexterapp.shopavenues.models.tabname
+import com.dexterapp.shopavenues.model.tabname
 
 class HomeTabAdapter(var tablist: ArrayList<tabname>?, var context: Context) :
     RecyclerView.Adapter<HomeTabAdapter.HomeTabViewHolder>() {
