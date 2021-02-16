@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+
+    <CheckBox
+        android:text=" "
+        android:id="@+id/checkbox_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@color/black"
+        android:checked="true" />
+
+    <ImageView
+        android:id="@+id/image_cart"
+        android:layout_width="100dp"
+        android:layout_height="124dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_toRightOf="@id/checkbox_cart"
+        android:src="@drawable/wishdemo" />
+
+    <TextView
+        android:id="@+id/tv_name_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/image_cart"
+        android:text="Nike Air Max 90"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_price_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name_cart"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/image_cart"
+        android:text="QAR 320.00" />
+
+    <TextView
+        android:id="@+id/tv_size_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_price_cart"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/image_cart"
+        android:text="Size: 42 EU" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_size_cart"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/image_cart"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_minus_circle" />
+
+        <EditText
+            android:layout_width="50dp"
+            android:layout_height="20dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_plus_circle" />
+    </LinearLayout>
+</RelativeLayout>
