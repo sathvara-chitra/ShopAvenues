@@ -80,7 +80,6 @@ class AddressListActivity : AppCompatActivity(), AddressAdapter.onAddressClick {
     }
 
     override fun onAddressClick() {
-
         val mainIntent = Intent(this, EditAddressActivity::class.java)
         startActivity(mainIntent)
 

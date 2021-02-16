@@ -10,6 +10,7 @@ import android.widget.TextView
 import com.dexterapp.shopavenues.R
 import com.dexterapp.shopavenues.activity.AddressListActivity
 import com.dexterapp.shopavenues.activity.ProfileActivity
+import com.dexterapp.shopavenues.activity.TransactionLIstActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -64,6 +65,10 @@ class ProfileFragment : Fragment() {
         }
         btnAddress!!.setOnClickListener {
             val mainIntent = Intent(activity, AddressListActivity::class.java)
+            startActivity(mainIntent)
+        }
+        btnTransaction!!.setOnClickListener {
+            val mainIntent = Intent(activity, TransactionLIstActivity::class.java)
             startActivity(mainIntent)
         }
     }
