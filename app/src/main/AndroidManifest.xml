@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopAvenues">
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".activity.TransactionDetailsActivity"></activity>
+        <activity android:name=".activity.TransactionLIstActivity" />
+        <activity android:name=".activity.EditAddressActivity" />
+        <activity android:name=".activity.AddAddressActivity" />
+        <activity android:name=".activity.AddressListActivity" />
+        <activity android:name=".activity.ProfileActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
