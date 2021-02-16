@@ -49,7 +49,7 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigation.itemIconTintList = null
 
         //Default
-        val homeFragment = WishlistFragment.newInstance("", "")
+        val homeFragment = HomeFragment.newInstance("", "")
         openFragment(homeFragment)
     }
 

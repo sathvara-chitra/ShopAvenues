@@ -4,4 +4,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="account">Account</string>
     <string name="add_new"><u>Add New</u></string>
+    <string name="size_chart"><u>Size Chart</u></string>
 </resources>

@@ -21,7 +21,7 @@
                 android:background="@color/black"
                 android:orientation="vertical">
 
-                <ScrollView
+                <HorizontalScrollView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
@@ -90,7 +90,7 @@
 
                     </LinearLayout>
 
-                </ScrollView>
+                </HorizontalScrollView>
 
                 <!--                <androidx.recyclerview.widget.RecyclerView-->
                 <!--                    android:id="@+id/tab_rv"-->

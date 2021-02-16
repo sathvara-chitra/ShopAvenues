@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/color_details"
+    >
+    <TextView
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:textColor="@color/black"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:drawableLeft="@drawable/ic_arrow_left"
+        android:drawablePadding="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_wishlist_selected"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/black"
+        android:layout_marginRight="16dp"
+        />
+
+</RelativeLayout>

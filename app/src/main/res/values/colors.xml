@@ -10,5 +10,7 @@
     <color name="light_text">#33111111</color>
     <color name="card_background">#F6F6F6</color>
     <color name="color_desc">#882B2B2B</color>
+    <color name="color_red">#D11D1D</color>
+    <color name="color_details">#11C4C4C4</color>
 
 </resources>

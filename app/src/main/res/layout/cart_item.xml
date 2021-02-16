@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:padding="10dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    >
 
     <CheckBox
         android:text=" "
@@ -53,20 +54,35 @@
         android:layout_below="@id/tv_size_cart"
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@id/image_cart"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:id="@+id/btnMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_minus_circle" />
 
         <EditText
-            android:layout_width="50dp"
-            android:layout_height="20dp" />
+            android:id="@+id/edtPrice"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:gravity="center"
+            android:textColor="@color/color_desc"
+            android:enabled="false"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:id="@+id/btnPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_plus_circle" />
     </LinearLayout>
 </RelativeLayout>

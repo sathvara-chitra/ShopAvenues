@@ -82,6 +82,10 @@ class AddressListActivity : AppCompatActivity(), AddressAdapter.onAddressClick {
     override fun onAddressClick() {
         val mainIntent = Intent(this, EditAddressActivity::class.java)
         startActivity(mainIntent)
+//        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
 
+//        val mainIntent = Intent(this, FilterActivity::class.java)
+//        startActivity(mainIntent)
+//        overridePendingTransition(R.anim.left_to_right, R.anim.right_to_left);
     }
 }

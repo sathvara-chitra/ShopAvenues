@@ -5,7 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
+import com.dexterapp.shopavenues.adapter.AddressAdapter
+import com.dexterapp.shopavenues.adapter.CartAdapter
+import com.dexterapp.shopavenues.model.AddressModel
+import com.dexterapp.shopavenues.model.CartModel
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -21,6 +27,10 @@ class CartFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
+    private var adapter: CartAdapter? = null
+    private var arrCart: ArrayList<CartModel>? = null
+    private var rvCartList: RecyclerView? = null
+    private var titleName: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +45,35 @@ class CartFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cart, container, false)
+        val root = inflater.inflate(R.layout.fragment_cart, container, false)
+        AddData()
+        init(root)
+        return root;
+    }
+
+    private fun init(root: View) {
+        titleName = root!!.findViewById(R.id.titleName)
+        rvCartList = root!!.findViewById(R.id.rvCartList)
+        adapter = CartAdapter(activity!!, arrCart!!)
+        rvCartList!!.adapter = adapter
+        titleName!!.setText("Cart")
+
+    }
+
+    private fun AddData() {
+        arrCart = ArrayList()
+        var cartModel1 = CartModel()
+        cartModel1.setname("Nike Air Max 90")
+        arrCart!!.add(
+            cartModel1
+        )
+        var cartModel2 = CartModel()
+        cartModel2.setname("Nike Air Max 90")
+        arrCart!!.add(
+            cartModel2
+        )
+
+
     }
 
     companion object {
