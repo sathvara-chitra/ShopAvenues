@@ -9,8 +9,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
-import com.dexterapp.shopavenues.adapter.*
-import com.dexterapp.shopavenues.model.tabname
+import com.dexterapp.shopavenues.adapters.AvenuesAdapter
+import com.dexterapp.shopavenues.adapters.BrandAdapter
+import com.dexterapp.shopavenues.adapters.TrandingAdapter
+import com.dexterapp.shopavenues.adapters.shopforAdapter
+import com.dexterapp.shopavenues.models.tabname
 import com.synnapps.carouselview.CarouselView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -91,18 +94,18 @@ class HomeFragment : Fragment() {
         TrandingRv = view.findViewById(R.id.tranding_rv)
         carouselView = view.findViewById(R.id.carouselView)
 
-        tablist?.add(tabname("male"))
-        tablist?.add(tabname("female"))
-        tablist?.add(tabname("avenues"))
-        tablist?.add(tabname("celebrity"))
-        tablist?.add(tabname("sale"))
+//        tablist?.add(tabname("male"))
+//        tablist?.add(tabname("female"))
+//        tablist?.add(tabname("avenues"))
+//        tablist?.add(tabname("celebrity"))
+//        tablist?.add(tabname("sale"))
 
         carouselView.pageCount = sampleImages.size
         carouselView.setImageListener { position, imageView ->
             imageView.setImageResource(sampleImages[position])
         }
 
-        val tabAdapter = HomeTabAdapter(tablist, context)
+//        val tabAdapter = HomeTabAdapter(tablist, context)
         val shopforAdapter = shopforAdapter(images, context)
         val avenuesAdapter = AvenuesAdapter(imagesavenues, context)
         val brandAdapter = BrandAdapter(imagesbrands, context)

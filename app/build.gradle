@@ -43,13 +43,10 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'us.belka:androidtoggleswitch:1.2.2'
+
     //crousel view
     implementation 'com.synnapps:carouselview:0.1.5'
 
-    //circle imageview
-    implementation 'de.hdodenhof:circleimageview:3.1.0'
     //tab
     implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
-    implementation "biz.laenger.android:vpbs:0.0.6"
 }
