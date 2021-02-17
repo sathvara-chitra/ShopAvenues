@@ -9,7 +9,10 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
-import com.dexterapp.shopavenues.adapters.*
+import com.dexterapp.shopavenues.adapters.AvenuesAdapter
+import com.dexterapp.shopavenues.adapters.BrandAdapter
+import com.dexterapp.shopavenues.adapters.TrandingAdapter
+import com.dexterapp.shopavenues.adapters.shopforAdapter
 import com.dexterapp.shopavenues.models.tabname
 import com.synnapps.carouselview.CarouselView
 
@@ -84,37 +87,37 @@ class HomeFragment : Fragment() {
 
         )
 
-        tabRv = view.findViewById(R.id.tab_rv)
+//        tabRv = view.findViewById(R.id.tab_rv)
         shopforRv = view.findViewById(R.id.shopfor_rv)
         avenuesRv = view.findViewById(R.id.avenues_rv)
         brandRv = view.findViewById(R.id.brand_rv)
         TrandingRv = view.findViewById(R.id.tranding_rv)
         carouselView = view.findViewById(R.id.carouselView)
 
-        tablist?.add(tabname("male"))
-        tablist?.add(tabname("female"))
-        tablist?.add(tabname("avenues"))
-        tablist?.add(tabname("celebrity"))
-        tablist?.add(tabname("sale"))
+//        tablist?.add(tabname("male"))
+//        tablist?.add(tabname("female"))
+//        tablist?.add(tabname("avenues"))
+//        tablist?.add(tabname("celebrity"))
+//        tablist?.add(tabname("sale"))
 
         carouselView.pageCount = sampleImages.size
         carouselView.setImageListener { position, imageView ->
             imageView.setImageResource(sampleImages[position])
         }
 
-        val tabAdapter = HomeTabAdapter(tablist, context)
+//        val tabAdapter = HomeTabAdapter(tablist, context)
         val shopforAdapter = shopforAdapter(images, context)
         val avenuesAdapter = AvenuesAdapter(imagesavenues, context)
         val brandAdapter = BrandAdapter(imagesbrands, context)
         val trandingAdapter = TrandingAdapter(imagestrending, context)
 
-        tabRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
+//        tabRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         shopforRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         avenuesRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         brandRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         brandRv.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         TrandingRv.layoutManager = GridLayoutManager(context, 2)
-        tabRv.adapter = tabAdapter
+//        tabRv.adapter = tabAdapter
         shopforRv.adapter = shopforAdapter
         avenuesRv.adapter = avenuesAdapter
         brandRv.adapter = brandAdapter

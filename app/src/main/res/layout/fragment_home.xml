@@ -17,59 +17,167 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:background="@color/black"
                 android:orientation="vertical">
-                <com.ogaclejapan.smarttablayout.SmartTabLayout
-                    android:id="@+id/viewpagertab"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    app:stl_indicatorAlwaysInCenter="false"
-                    app:stl_indicatorWithoutPadding="false"
-                    app:stl_indicatorInFront="false"
-                    app:stl_indicatorInterpolation="smart"
-                    app:stl_indicatorGravity="bottom"
-                    app:stl_indicatorColor="#40C4FF"
-                    app:stl_indicatorThickness="4dp"
-                    app:stl_indicatorWidth="auto"
-                    app:stl_indicatorCornerRadius="2dp"
-                    app:stl_overlineColor="#4D000000"
-                    app:stl_overlineThickness="0dp"
-                    app:stl_underlineColor="#4D000000"
-                    app:stl_underlineThickness="1dp"
-                    app:stl_dividerColor="#4D000000"
-                    app:stl_dividerThickness="1dp"
-                    app:stl_defaultTabBackground="?attr/selectableItemBackground"
-                    app:stl_defaultTabTextAllCaps="true"
-                    app:stl_defaultTabTextColor="#FC000000"
-                    app:stl_defaultTabTextSize="12sp"
-                    app:stl_defaultTabTextHorizontalPadding="16dp"
-                    app:stl_defaultTabTextMinWidth="0dp"
-                    app:stl_distributeEvenly="false"
-                    app:stl_clickable="true"
-                    app:stl_titleOffset="24dp"
-                    app:stl_drawDecorationAfterTab="false"
-                    />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/tab_rv"
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/home_tab_item" />
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="70dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tab_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingHorizontal="30dp"
+                                android:text="MALE"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#D04E4E" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tab_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingHorizontal="30dp"
+                                android:text="FEMALE"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#D04E4E"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tab_avenues"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingHorizontal="30dp"
+                                android:text="avenues"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="3dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#D04E4E"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tab_celebrity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingHorizontal="30dp"
+                                android:text="celebrity"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="3dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#D04E4E"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tab_sale"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:paddingHorizontal="30dp"
+                                android:text="sale"
+                                android:textAllCaps="true"
+                                android:textColor="#FE0404"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+
+                                android:layout_height="3dp"
+                                android:layout_marginTop="8dp"
+                                android:background="#D04E4E"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!--                <androidx.recyclerview.widget.RecyclerView-->
+                <!--                    android:id="@+id/tab_rv"-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:layout_weight="1"-->
+                <!--                    android:orientation="horizontal"-->
+                <!--                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+                <!--                    tools:listitem="@layout/home_tab_item" />-->
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="10dp">
 
                     <EditText
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="50dp"
                         android:background="@drawable/et_round_border"
                         android:drawableEnd="@drawable/ic_search"
                         android:paddingStart="10dp"
@@ -85,11 +193,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 app:fillColor="#FFFFFFFF"
-                app:indicatorGravity="bottom|center_horizontal"
+                app:indicatorMarginHorizontal="30dp"
                 app:pageColor="#00000000"
                 app:radius="6dp"
                 app:slideInterval="3000"
-                app:strokeColor="@android:color/transparent" />
+                app:strokeColor="@android:color/transparent"
+                app:strokeWidth="1dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -257,9 +366,9 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/tranding_rv"
-                    android:layout_marginHorizontal="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="20dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="2"

@@ -1,8 +1,10 @@
 package com.dexterapp.shopavenues
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.dexterapp.shopavenues.fragments.CartFragment
+import com.dexterapp.shopavenues.fragments.HomeFragment
 import com.dexterapp.shopavenues.fragments.ProfileFragment
 import com.dexterapp.shopavenues.fragments.WishlistFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -13,11 +15,12 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
         init()
     }
+
     private val mOnNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_home -> {
-                     val favFragment = WishlistFragment.newInstance("", "")
+                    val favFragment = HomeFragment.newInstance("", "")
                     openFragment(favFragment)
                     return@OnNavigationItemSelectedListener true
                 }
@@ -27,12 +30,12 @@ class HomeActivity : AppCompatActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_cart -> {
-                    val favFragment = WishlistFragment.newInstance("", "")
+                    val favFragment = CartFragment.newInstance("", "")
                     openFragment(favFragment)
                     return@OnNavigationItemSelectedListener true
                 }
                 R.id.navigation_profile -> {
-                     val favFragment = ProfileFragment.newInstance("", "")
+                    val favFragment = ProfileFragment.newInstance("", "")
                     openFragment(favFragment)
                     return@OnNavigationItemSelectedListener true
                 }
@@ -46,13 +49,13 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigation.itemIconTintList = null
 
         //Default
-        val homeFragment = WishlistFragment.newInstance("", "")
+        val homeFragment = HomeFragment.newInstance("", "")
         openFragment(homeFragment)
     }
 
     private fun openFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
-        transaction.add(R.id.container, fragment)
+        transaction.replace(R.id.container, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }
