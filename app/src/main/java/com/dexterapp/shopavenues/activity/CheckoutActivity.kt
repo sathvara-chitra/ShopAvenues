@@ -71,9 +71,10 @@ class CheckoutActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.custom_alert_dialog)
         val btnShopping = dialog.findViewById(R.id.btnShopping) as LinearLayout
         btnShopping.setOnClickListener {
-            dialog.dismiss()
             val mainIntent = Intent(activity,HomeActivity::class.java)
             startActivity(mainIntent)
+            finish()
+            dialog.dismiss()
         }
 
         dialog.show()

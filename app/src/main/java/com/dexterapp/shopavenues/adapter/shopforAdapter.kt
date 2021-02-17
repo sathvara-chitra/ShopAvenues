@@ -1,12 +1,14 @@
 package com.dexterapp.shopavenues.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
+import com.dexterapp.shopavenues.activity.ProductDetailsActivity
 
 class shopforAdapter(var imagelist: IntArray, var context: Context) :
     RecyclerView.Adapter<shopforAdapter.shopforHolder>() {
@@ -20,6 +22,10 @@ class shopforAdapter(var imagelist: IntArray, var context: Context) :
 
     override fun onBindViewHolder(holder: shopforHolder, position: Int) {
         holder.image.setImageResource(imagelist[position])
+        holder.itemView.setOnClickListener {
+            val mainIntent = Intent(context, ProductDetailsActivity::class.java)
+            context.startActivity(mainIntent)
+        }
 
     }
 
@@ -30,6 +36,7 @@ class shopforAdapter(var imagelist: IntArray, var context: Context) :
     inner class shopforHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         var image: ImageView = itemView.findViewById(R.id.image)
+
 
     }
 }

@@ -48,10 +48,13 @@
                                 android:textSize="16sp" />
 
                             <LinearLayout
+                                android:id="@+id/viewMale"
                                 android:layout_width="match_parent"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="8dp"
-                                android:background="#D04E4E" />
+                                android:background="@color/color_line_red"
+                                android:visibility="invisible"
+                                android:orientation="horizontal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -72,11 +75,13 @@
                                 android:textSize="16sp" />
 
                             <LinearLayout
+                                android:id="@+id/viewFemale"
                                 android:layout_width="match_parent"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="8dp"
-                                android:background="#D04E4E"
-                                android:visibility="invisible" />
+                                android:background="@color/color_line_red"
+                                android:visibility="invisible"
+                                android:orientation="horizontal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -98,11 +103,12 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-
+                                android:id="@+id/viewAvenue"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="8dp"
-                                android:background="#D04E4E"
-                                android:visibility="invisible" />
+                                android:background="@color/color_line_red"
+                                android:visibility="invisible"
+                                android:orientation="horizontal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -124,11 +130,12 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-
+                                android:id="@+id/viewCelebrity"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="8dp"
-                                android:background="#D04E4E"
-                                android:visibility="invisible" />
+                                android:background="@color/color_line_red"
+                                android:visibility="invisible"
+                                android:orientation="horizontal" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -145,16 +152,17 @@
                                 android:paddingHorizontal="30dp"
                                 android:text="sale"
                                 android:textAllCaps="true"
-                                android:textColor="#FE0404"
+                                android:textColor="@color/color_textred"
                                 android:textSize="16sp" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-
+                                android:id="@+id/viewSale"
                                 android:layout_height="3dp"
                                 android:layout_marginTop="8dp"
-                                android:background="#D04E4E"
-                                android:visibility="invisible" />
+                                android:background="@color/color_line_red"
+                                android:visibility="invisible"
+                                android:orientation="horizontal" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -188,166 +196,173 @@
 
             </LinearLayout>
 
-            <com.synnapps.carouselview.CarouselView
-                android:id="@+id/carouselView"
-                android:layout_width="match_parent"
-                android:layout_height="240dp"
-                app:fillColor="#FFFFFFFF"
-                app:indicatorMarginHorizontal="30dp"
-                app:pageColor="#00000000"
-                app:radius="6dp"
-                app:slideInterval="3000"
-                app:strokeColor="@android:color/transparent"
-                app:strokeWidth="1dp" />
-
             <LinearLayout
+                android:id="@+id/ll_home"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginVertical="15dp"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Shop for"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/shopfor_rv"
+                <com.synnapps.carouselview.CarouselView
+                    android:id="@+id/carouselView"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="20dp"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/shop_for_item" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:text="Avenues"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/avenues_rv"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginVertical="20dp"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/avenues_item" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:text="Celebrity"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:layout_height="240dp"
+                    app:fillColor="#FFFFFFFF"
+                    app:indicatorMarginHorizontal="30dp"
+                    app:pageColor="#00000000"
+                    app:radius="6dp"
+                    app:slideInterval="3000"
+                    app:strokeColor="@android:color/transparent"
+                    app:strokeWidth="1dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="320dp"
-                    android:layout_marginVertical="20dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/grid_full" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/grid1" />
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/grid3" />
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/grid2" />
-
-                        <ImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/grid4" />
-                    </LinearLayout>
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:text="Brand"
-                    android:textColor="@color/black"
-                    android:textSize="20sp" />
+                    android:layout_marginVertical="15dp"
+                    android:orientation="vertical">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/brand_rv"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Shop for"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/shopfor_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/shop_for_item" />
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="20dp"
-                    android:orientation="horizontal"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/brand_item" />
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Avenues"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/avenues_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/avenues_item" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Celebrity"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="320dp"
+                        android:layout_marginVertical="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/grid_full" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/grid1" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/grid3" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/grid2" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/grid4" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="Brand"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/brand_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="20dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/brand_item" />
+
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
@@ -357,6 +372,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/txtTranding"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"

@@ -12,5 +12,7 @@
     <color name="color_desc">#882B2B2B</color>
     <color name="color_red">#D11D1D</color>
     <color name="color_details">#11C4C4C4</color>
+    <color name="color_textred">#FE0404</color>
+    <color name="color_line_red">#D04E4E</color>
 
 </resources>

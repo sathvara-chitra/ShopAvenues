@@ -1,12 +1,14 @@
 package com.dexterapp.shopavenues.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
+import com.dexterapp.shopavenues.activity.ProductDetailsActivity
 
 class TrandingAdapter(var imagelist: IntArray, var context: Context) :
     RecyclerView.Adapter<TrandingAdapter.TrandingViewHolder>() {
@@ -20,7 +22,10 @@ class TrandingAdapter(var imagelist: IntArray, var context: Context) :
 
     override fun onBindViewHolder(holder: TrandingViewHolder, position: Int) {
         holder.image.setImageResource(imagelist[position])
-
+        holder.itemView.setOnClickListener {
+            val mainIntent = Intent(context, ProductDetailsActivity::class.java)
+            context.startActivity(mainIntent)
+        }
     }
 
     override fun getItemCount(): Int {
