@@ -1,13 +1,16 @@
 package com.dexterapp.shopavenues.fragments
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dexterapp.shopavenues.R
+import com.dexterapp.shopavenues.activity.CheckoutActivity
 import com.dexterapp.shopavenues.adapter.AddressAdapter
 import com.dexterapp.shopavenues.adapter.CartAdapter
 import com.dexterapp.shopavenues.model.AddressModel
@@ -31,6 +34,7 @@ class CartFragment : Fragment() {
     private var arrCart: ArrayList<CartModel>? = null
     private var rvCartList: RecyclerView? = null
     private var titleName: TextView? = null
+    private var btnBuy: LinearLayout? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,10 +52,19 @@ class CartFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_cart, container, false)
         AddData()
         init(root)
+        onClick()
         return root;
     }
 
+    private fun onClick() {
+        btnBuy!!.setOnClickListener {
+            val mainIntent = Intent(activity,CheckoutActivity::class.java)
+            startActivity(mainIntent)
+        }
+    }
+
     private fun init(root: View) {
+        btnBuy = root!!.findViewById(R.id.btnBuy)
         titleName = root!!.findViewById(R.id.titleName)
         rvCartList = root!!.findViewById(R.id.rvCartList)
         adapter = CartAdapter(activity!!, arrCart!!)
