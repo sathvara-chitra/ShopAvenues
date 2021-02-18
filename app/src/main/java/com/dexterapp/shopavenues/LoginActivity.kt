@@ -35,10 +35,18 @@ class LoginActivity : AppCompatActivity() {
         btnSignIn!!.setOnClickListener {
             ll_signIn!!.visibility = View.VISIBLE
             ll_signUp!!.visibility = View.GONE
+//            btnSignIn!!.setBackgroundColor(resources.getColor(R.color.black))
+//            btnSignUp!!.setBackgroundColor(resources.getColor(R.color.white))
+//            txtSignIn!!.setTextColor(resources.getColor(R.color.white))
+//            txtSignUp!!.setTextColor(resources.getColor(R.color.black))
         }
         btnSignUp!!.setOnClickListener {
             ll_signIn!!.visibility = View.GONE
             ll_signUp!!.visibility = View.VISIBLE
+//            btnSignIn!!.setBackgroundColor(resources.getColor(R.color.white))
+//            btnSignUp!!.setBackgroundColor(resources.getColor(R.color.black))
+//            txtSignIn!!.setTextColor(resources.getColor(R.color.black))
+//            txtSignUp!!.setTextColor(resources.getColor(R.color.white))
         }
         txtSignIn!!.setOnClickListener {
             val mainIntent = Intent(this, HomeActivity::class.java)

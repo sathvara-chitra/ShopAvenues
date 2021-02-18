@@ -2,6 +2,7 @@ package com.dexterapp.shopavenues.activity
 
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.recyclerview.widget.RecyclerView
@@ -16,9 +17,10 @@ import com.google.android.material.bottomsheet.BottomSheetBehavior
 
 
 class ProductDetailsActivity : AppCompatActivity() {
-    var bottom_sheet :CoordinatorLayout?=null
-    var rv_productSize :RecyclerView?=null
-    var rv_productColors :RecyclerView?=null
+    var btnBack: TextView? = null
+    var bottom_sheet: CoordinatorLayout? = null
+    var rv_productSize: RecyclerView? = null
+    var rv_productColors: RecyclerView? = null
     private var sizesModel: SizeModel? = null
     private var productModel: ProductModel? = null
     private var arrFilterSize: ArrayList<SizeModel>? = ArrayList()
@@ -89,6 +91,7 @@ class ProductDetailsActivity : AppCompatActivity() {
             R.drawable.femaledemo,
             R.drawable.maledemo,
         )
+        btnBack = findViewById(R.id.btnBack)
         bottom_sheet = findViewById(R.id.bottom_sheet)
         rv_productSize = findViewById(R.id.rv_productSize)
         rv_productColors = findViewById(R.id.rv_productColors)
@@ -96,5 +99,13 @@ class ProductDetailsActivity : AppCompatActivity() {
         rv_productSize!!.adapter = adapter2
         var adapter = ProductAdapter(this!!, arrProductImage!!)
         rv_productColors!!.adapter = adapter
+
+        onClick()
+    }
+
+    private fun onClick() {
+        btnBack!!.setOnClickListener {
+            finish()
+        }
     }
 }

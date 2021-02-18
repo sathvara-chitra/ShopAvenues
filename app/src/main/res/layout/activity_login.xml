@@ -20,20 +20,20 @@
             android:fontFamily="sans-serif-black"
             android:gravity="center"
             android:text="Sign In"
+            android:background="@color/black"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/btnSignUp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@color/black"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
             android:text="Sign Up"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/white" />
+            android:textColor="@color/black" />
 
     </LinearLayout>
 

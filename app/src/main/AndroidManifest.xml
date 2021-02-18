@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShopAvenues">
-        <activity android:name=".activity.CheckoutActivity"></activity>
+        <activity android:name=".activity.CelebrityDetailsActivity"></activity>
+        <activity android:name=".activity.AcademyDetailsActivity" />
+        <activity android:name=".activity.FilterAcademyActivity" />
+        <activity android:name=".activity.AcademyListActivity" />
+        <activity android:name=".activity.CheckoutActivity" />
         <activity android:name=".activity.ProductDetailsActivity" />
         <activity android:name=".activity.FilterActivity" />
         <activity android:name=".activity.TransactionDetailsActivity" />
