@@ -215,6 +215,7 @@
                     app:pageColor="#00000000"
                     app:radius="6dp"
                     app:slideInterval="3000"
+                    android:visibility="visible"
                     app:strokeColor="@android:color/transparent"
                     app:strokeWidth="1dp" />
 
@@ -222,7 +223,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:layout_marginVertical="15dp"
+                    android:layout_marginVertical="10dp"
+                    android:visibility="visible"
                     android:orientation="vertical">
 
                     <TextView
@@ -237,7 +239,7 @@
                         android:id="@+id/shopfor_rv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="20dp"
+                        android:layout_marginVertical="10dp"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:listitem="@layout/shop_for_item" />
@@ -248,7 +250,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
                     android:orientation="vertical">
 
                     <TextView
@@ -263,7 +266,6 @@
                         android:id="@+id/avenues_rv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="20dp"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:listitem="@layout/avenues_item" />
@@ -273,7 +275,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
                     android:orientation="vertical">
 
                     <TextView
@@ -287,7 +290,7 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="320dp"
-                        android:layout_marginVertical="20dp"
+                        android:layout_marginVertical="10dp"
                         android:orientation="horizontal">
 
                         <ImageView
@@ -346,7 +349,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="visible"
                     android:orientation="vertical">
 
                     <TextView
@@ -361,7 +365,7 @@
                         android:id="@+id/brand_rv"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginVertical="20dp"
+                        android:layout_marginVertical="10dp"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                         tools:listitem="@layout/brand_item" />
@@ -374,6 +378,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginTop="10dp"
                 android:visibility="visible">
 
                 <TextView
@@ -390,7 +395,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:layout_marginVertical="20dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:spanCount="2"
                     tools:itemCount="2"
