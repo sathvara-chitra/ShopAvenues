@@ -1,19 +1,28 @@
-package com.dexterapp.shopavenues
+package com.dexterapp.shopavenues.login
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import com.dexterapp.shopavenues.HomeActivity
+import com.dexterapp.shopavenues.R
+import com.dexterapp.shopavenues.login.ViewModel.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
+    lateinit var et_email: EditText
+    lateinit var et_password: EditText
     private var btnSignIn: TextView? = null
     private var btnSignUp: TextView? = null
     private var txtSignIn: TextView? = null
     private var txtSignUp: TextView? = null
     private var ll_signIn: LinearLayout? = null
     private var ll_signUp: LinearLayout? = null
+    private var model: LoginViewModel? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -23,12 +32,15 @@ class LoginActivity : AppCompatActivity() {
 
 
     private fun init() {
-        btnSignIn = findViewById(R.id.btnSignIn) as TextView
-        btnSignUp = findViewById(R.id.btnSignUp) as TextView
-        txtSignIn = findViewById(R.id.txtSignIn) as TextView
-        txtSignUp = findViewById(R.id.txtSignUp) as TextView
-        ll_signIn = findViewById(R.id.ll_signIn) as LinearLayout
-        ll_signUp = findViewById(R.id.ll_signUp) as LinearLayout
+        et_email = findViewById(R.id.et_email)
+        et_password = findViewById(R.id.et_password)
+        btnSignIn = findViewById(R.id.btnSignIn)
+        btnSignUp = findViewById(R.id.btnSignUp)
+        txtSignIn = findViewById(R.id.txtSignIn)
+        txtSignUp = findViewById(R.id.txtSignUp)
+        ll_signIn = findViewById(R.id.ll_signIn)
+        ll_signUp = findViewById(R.id.ll_signUp)
+        model = ViewModelProvider(this).get(LoginViewModel::class.java)
     }
 
     private fun onClick() {
@@ -49,8 +61,16 @@ class LoginActivity : AppCompatActivity() {
 //            txtSignUp!!.setTextColor(resources.getColor(R.color.white))
         }
         txtSignIn!!.setOnClickListener {
-            val mainIntent = Intent(this, HomeActivity::class.java)
-            startActivity(mainIntent)
+
+            if (et_email.text.isNullOrEmpty() or et_password.text.isNullOrEmpty()) {
+                Toast.makeText(this, "Email and password not be empty", Toast.LENGTH_SHORT).show()
+            } else
+                model?.onLoginCLick(et_email.text.toString(), et_password.text.toString())
+                    ?.observe(this, {
+                        val mainIntent = Intent(this, HomeActivity::class.java)
+                        startActivity(mainIntent)
+                    })
+
         }
         txtSignUp!!.setOnClickListener {
             val mainIntent = Intent(this, HomeActivity::class.java)

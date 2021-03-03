@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dexterapp.shopavenues">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +14,7 @@
         <activity android:name=".activity.CelebrityDetailsActivity"></activity>
         <activity android:name=".activity.AcademyDetailsActivity" />
         <activity android:name=".activity.FilterAcademyActivity" />
-        <activity android:name=".activity.AcademyListActivity" />
+<!--        <activity android:name=".activity.AcademyListActivity" />-->
         <activity android:name=".activity.CheckoutActivity" />
         <activity android:name=".activity.ProductDetailsActivity" />
         <activity android:name=".activity.FilterActivity" />
@@ -22,7 +24,7 @@
         <activity android:name=".activity.AddAddressActivity" />
         <activity android:name=".activity.AddressListActivity" />
         <activity android:name=".activity.ProfileActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".login.LoginActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
